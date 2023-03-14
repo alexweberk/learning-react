@@ -11,10 +11,7 @@ import {
   getDoc,
   setDoc
 } from 'firebase/firestore';
-
-const firebaseConfig = {
-
-};
+import { firebaseConfig } from './.firebase.config';
 
 const firebaseApp = initializeApp(firebaseConfig);
 
