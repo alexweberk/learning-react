@@ -20,7 +20,17 @@ import {
 	query,
 	getDocs,
 } from 'firebase/firestore';
-import { firebaseConfig } from './.firebase.config';
+// import { firebaseConfig } from './.firebase.config';
+import env from 'react-dotenv';
+
+const firebaseConfig = {
+	apiKey: process.env.REACT_APP_firebaseApiKey,
+	authDomain: process.env.REACT_APP_firebaseAuthDomain,
+	projectId: process.env.REACT_APP_firebaseProjectId,
+	storageBucket: process.env.REACT_APP_firebaseStorageBucket,
+	messagingSenderId: process.env.REACT_APP_firebaseMessagingSenderId,
+	appId: process.env.REACT_APP_firebaseAppId,
+};
 
 const firebaseApp = initializeApp(firebaseConfig);
 
